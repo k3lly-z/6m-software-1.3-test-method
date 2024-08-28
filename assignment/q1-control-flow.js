@@ -11,5 +11,19 @@ const env = "DEV"; // Toggle between these possible values "DEV" | "STAGE" | "PR
 let databaseCredential = "devuser:password";
 
 // Task: Add code here
+switch (env) {
+  case "DEV":
+    let databaseCredential = "devuser:password";
+    break;
+  case "STAGE":
+    let databaseCredential = "stageuser:password";
+    break;
+  case "PROD":
+    let databaseCredential = "produser:password";
+}
 
-console.log(`Database credential for environment ${env} is ${databaseCredential}`);
+console.log(
+  `Database credential for environment ${env} is ${databaseCredential}`
+);
+
+//Reference:https://www.w3schools.com/js/js_switch.asp
